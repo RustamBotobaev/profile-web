@@ -1,0 +1,69 @@
+.stories {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-column-gap: 13px;
+    grid-template-rows: 195px;
+    margin-bottom: 3rem;
+
+    @include braekpoint($modile-bp) {
+        grid-template-columns: 120px 120px 120px 120px;
+        overflow: auto;
+    }
+}
+
+.stories__item {
+    position: relative;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0, .2);
+    cursor: pointer;
+
+    &::after {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-image: linear-gradient(to bottom, rgba(0,0,0, .8), rgba(0,0,0, 0)50%, rgba(0,0,0, .8));
+    }
+
+    &:hover {
+        .stories__preview{
+        transform: scale(1.3);
+        transition-duration: 5s;
+        }
+    }
+}
+
+.stories__preview {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1.05);
+    transition: transform ease-in-out 1s;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.stories__title,
+.stories__date {
+    position: absolute;
+    z-index: 3;
+    padding: 1.4rem;
+    font-size: 1.2rem;
+    line-height: 1.3;
+    color: $white;
+}
+
+.stories__title {
+    top: 0;
+    left: 0;
+}
+
+.stories__date{
+    bottom: 0;
+    right: 0;
+}

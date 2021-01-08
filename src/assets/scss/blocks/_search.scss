@@ -1,0 +1,24 @@
+.search {
+    background-color: $primary;
+}
+
+.search__input {
+    display: block;
+    padding: 1.2rem 2rem;
+    font-size: 1.2rem;
+    background: transparent;
+    border: none;
+    font-family: inherit;
+    color: $white;
+
+    &:hover {
+        color: rgba($white, .4);
+    }
+
+    @include braekpoint($tablet-bp) {
+        height: 4rem;
+        padding-top: .9rem;
+        padding-bottom: .9rem;
+        font-size: 1.6rem;
+    }
+}

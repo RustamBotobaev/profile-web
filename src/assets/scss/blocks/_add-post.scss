@@ -1,0 +1,83 @@
+.add-post {
+    margin-bottom: 3rem;
+    padding: 1.5rem 2rem;
+    background-color: $secondary;
+    box-shadow: 0 15px 45px rgba(0,0,0, .45);
+    border-radius: 5px;
+
+    @include braekpoint($modile-bp) {
+        padding: 1.5rem;
+    }
+}
+
+.add-post__form {
+    display: flex;
+    align-items: center;
+}
+
+.add-post__textarea {
+    font-family: inherit;
+    font-size: 1.5rem;
+    color: $white;
+    display: block;
+    flex-grow: 1;
+    overflow: hidden;
+    height: 26px;
+    border: none;
+    background: transparent;
+    resize: none;
+
+    &::placeholder {
+        color: #d2d2d2;
+    }
+}
+
+.add-post__form-action {
+    display: flex;
+    justify-content: space-around;
+    width: 12rem;
+    flex-shrink: 0;
+
+    @include braekpoint($modile-bp) {
+        width: 9rem;
+    }
+}
+
+.add-post__file,
+.add-post__send {
+    display: block;
+    width: 4.4rem;
+    height: 4.4rem;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+
+    @include braekpoint($modile-bp) {
+        width: 3.4rem;
+        height: 3.4rem;
+    }
+}
+
+.add-post__file {
+    background: #ebebeb url('../images/add-post.svg') center no-repeat;
+
+    input {
+        display: none;
+    }
+
+    @include braekpoint($modile-bp) {
+        background-size: 18px;
+    }
+}
+
+.add-post__send {
+    margin-left: 1.5rem;
+    font-size: 0;
+    color: transparent;
+    background: $blue url('../images/send-1.svg') center no-repeat;
+    background-color: $blue;
+
+    @include braekpoint($modile-bp) {
+        background-size: 15px;
+    }
+}

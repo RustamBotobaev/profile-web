@@ -1,0 +1,44 @@
+.subnav {
+    display: none;
+    width: 16.5rem;
+    background-color: $blue;
+    border-radius: 0 0 5px 5px;
+    box-shadow: 0 6px 8px rgba(0,0,0, .2);
+    position: absolute;
+    top: 100%;
+    left: 0;
+
+    @include braekpoint($tablet-bp) {
+        position: static;
+        width: 100%;
+
+        background-color: transparent;
+        border: none;
+        box-shadow: none;
+        padding-left: 2rem; 
+    }
+}
+
+.subnav__link {
+    position: block;
+    padding: .45rem 1.2rem;
+
+    font-size: 1.2rem;
+    color: $white;
+    text-decoration: none;
+
+    &:hover {
+        background-color: darkblue;
+    }
+
+    @include braekpoint($tablet-bp) {
+        padding-left: 0;
+        padding-right: 0;
+
+        font-size: 1.5rem;
+
+        &:hover {
+            background: none;
+        }
+    }
+}

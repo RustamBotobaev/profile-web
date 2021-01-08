@@ -1,0 +1,73 @@
+.nav {
+    @include braekpoint($tablet-bp) {
+        display: none;
+
+        &--mobile {
+            display: block;
+            margin: 3rem 0;
+        }
+    }
+}
+
+.nav__list {
+    display: flex;
+
+    @include braekpoint($tablet-bp) {
+        flex-direction: column;
+    }
+}
+
+.nav__item {
+    position: relative;
+    &:hover {
+        .nav__link{
+                background-color: #3137c9;
+            }
+        
+        > .subnav {
+            display: block;
+        }
+    }
+
+    @include braekpoint($tablet-bp) {
+        &:hover {
+            .nav__link {
+                background: none;
+            }
+        }
+    }
+}
+
+.nav__link {
+    display: block;
+    font-size: 1.1rem;
+    padding: 1.5rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: $white;
+    transition: bacground-color .2s linear;
+
+    
+
+    &.has-subnav {
+        position: relative;
+        padding-right: 3.5rem;
+        &::after {
+            content: '';
+            border-style: solid;
+            border-width: 6px 5px 0 5px;
+            border-color: $white transparent transparent transparent;
+            position: absolute;
+            top: 50%;
+            right: 1.35rem;
+            transform: translateY(-50%);
+        }
+    }
+
+    @include braekpoint($tablet-bp) {
+        padding-left: 0;
+        padding-right: 0;
+
+        font-size: 1.6rem;
+    }
+}

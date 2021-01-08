@@ -1,0 +1,77 @@
+.work {
+    display: flex;
+    overflow: hidden;
+    margin-bottom: 3rem;
+    box-shadow: 0 15px 25px rgbs(0,0,0, .35);
+    border-radius: 5px;
+    background-color: $primary;
+
+    @include braekpoint($modile-bp) {
+        flex-direction: column;
+    }
+}
+
+.work__preview {
+    width: 310px;
+
+    img {
+        display: block;
+        width: 31rem;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    @include braekpoint($modile-bp) {
+        width: 100%;
+        height: 15rem;
+    }
+}
+
+.work__content {
+    display: flex;
+    flex-direction: column;
+    max-width: 29rem;
+    padding: 2.5rem;
+
+    @include braekpoint($modile-bp) {
+        min-width: none;
+        padding: 1.5rem;
+    }
+}
+
+.work__title {
+    margin-bottom: 3rem;
+    font-size: 2.4rem;
+    color: $white;
+    font-weight: 500;
+
+    a {
+        color: inherit;
+    }
+
+    @include braekpoint($modile-bp) {
+        margin-bottom: 2rem;
+    }
+}
+
+.work__description {
+    font-weight: 300;
+    font-size: 1.4rem;
+    line-height: 1.68;
+    color: #d2d2d2;
+    margin-bottom: 3rem;
+
+    @include braekpoint($modile-bp) {
+        margin-bottom: 2rem;
+        font-size: 1.4rem;
+    }
+}
+
+.work__footer {
+    margin-top: auto;
+    text-align: right;
+
+    @include braekpoint($modile-bp) {
+        text-align: left;
+    }
+}

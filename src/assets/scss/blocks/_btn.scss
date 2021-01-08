@@ -1,0 +1,39 @@
+.btn {
+    display: inline-block;
+    vertical-align: top;
+    padding: 1.1em 2.1em;
+
+    font-family: inherit;
+    font-size: 1.2rem;
+    line-height: 1.1;
+    font-weight: 500;
+    color: $white;
+
+    cursor: pointer;
+    text-decoration: none;
+    border: none;
+    border-radius: 3rem;
+    background-color: $secondary;
+
+    transition: bacground-color .2s linear;
+
+    &--red {
+        background-color: #ed3024;
+
+        &:hover {
+            background-color: lightcoral;
+        }
+    }
+
+    &--blue {
+    background-color: #3137c9;
+
+    &:hover {
+        background-color: lightblue;
+    }
+    }
+
+    &--rounded {
+        border-radius: .41em;
+    }
+}
