@@ -1,10 +1,15 @@
 .nav {
+    
     @include braekpoint($tablet-bp) {
         display: none;
+    }
 
-        &--mobile {
-            display: block;
-            margin: 3rem 0;
+    &--mobile {
+        display: block;
+        margin: 3rem 0;
+
+        @media screen and (min-width: 992px) {
+            display: none;
         }
     }
 }

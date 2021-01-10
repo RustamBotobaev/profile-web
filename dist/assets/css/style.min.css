@@ -440,10 +440,14 @@ header {
 
 @media screen and (max-width: 991px) {
   .nav {
-    display: none; }
+    display: none; } }
+
+.nav--mobile {
+  display: block;
+  margin: 3rem 0; }
+  @media screen and (min-width: 992px) {
     .nav--mobile {
-      display: block;
-      margin: 3rem 0; } }
+      display: none; } }
 
 .nav__list {
   display: flex; }
