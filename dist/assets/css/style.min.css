@@ -1263,6 +1263,8 @@ header {
   top: 0;
   left: 0;
   z-index: 1010; }
+  .modal.show {
+    display: flex; }
 
 .modal__content {
   width: 100%;
@@ -1273,6 +1275,9 @@ header {
   position: relative; }
   .modal__content--contact {
     padding-bottom: 2.5rem; }
+  .modal__content--story {
+    padding: 0;
+    background: none; }
 
 .modal__cancel {
   padding: 0;
@@ -1300,3 +1305,7 @@ header {
     text-decoration: underline; }
     .modal__footer a:hover {
       text-decoration: none; }
+
+.modal__video {
+  display: block;
+  margin: 0 auto; }

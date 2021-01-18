@@ -92,7 +92,7 @@
         </div>
         <div class="sidebar__footer">
             <a class="btn btn--red" href="works.html">Мои работы</a>
-            <button class="btn btn--blue" type="button">Написать мне</button>
+            <button class="btn btn--blue" type="button" data-modal="contact-modal">Написать мне</button>
         </div>
     </aside>    
 
@@ -182,8 +182,55 @@
     </main>
     </div>
     
-    <div class="modal">
+    <div class="modal" id="story-modal">
+        <div class="modal__contant  modal__content--story">
         <video class="modal__video" src="" poster="https://placehold.it/420x580"></video>
+    </div>
+    </div>    <div class="modal" id="contact-modal">
+        <div class="modal__content modal__content--contact">
+            <button class="modal__cancel" type="button">
+                <img src="assets/images/cancel.svg" alt="cancel">
+            </button>
+            <form action="/" method="POST" class="form">
+                <div class="form__group--md">
+                    <input type="name" class="form__control" placeholder="Ваше имя" value="Рустам Ботобаев">
+                    <span class="form__line"></span>
+                </div>
+                <div class="form__group--md">
+                    <input type="email" class="form__control" placeholder="Ваше e-mail">
+                    <span class="form__line"></span>
+                </div>
+                <div class=" form__group form__group--md">
+                        <textarea class="form__control form__control--textarea" placeholder="Текст сообщения"></textarea>
+                    <span class="form__line"></span>
+                </div>
+                <div class="form__footer">
+                    <div class="form__group--md">
+                    <button class="btn btn--blue btn--rounded" type="submit">Отправить</button></div>
+                </div>
+            </form>
+            <ul class="modal__footer">
+                <li>
+                e-mail: <a href="mailto:dejavu1510@gmail.com">Dejavu1510@gmail.com</a>
+            </li>
+            <li>
+            тел: <a href="tel:+79779313786">+7 977 931-37-86</a>
+        </li>
+            </ul>
+        </div>
+    </div>    
+    <div class="modal">
+        <div class="modal__content">
+            <button class="modal__cancel" type="button">
+                <img src="assets/images/cancel.svg" alt="cancel">
+            </button>
+            <ul class="social">
+                <li class="social__item"><a href="" class="social__link"><img src="assets/images/facebook.svg" alt=""></a></li>
+                <li class="social__item"><a href="" class="social__link"><img src="assets/images/twitter.svg" alt=""></a></li>
+                <li class="social__item"><a href="" class="social__link"><img src="assets/images/vk.svg" alt=""></a></li>
+                <li class="social__item"><a href="" class="social__link"><img src="assets/images/copy.svg" alt=""></a></li>
+            </ul>
+        </div>
     </div>    <script src="assets/js/app.js"></script>
 </body>
 </html>

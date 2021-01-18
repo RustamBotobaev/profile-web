@@ -1,5 +1,4 @@
 .modal {
-    // display: flex;
     display: none;
     flex-direction: column;
     justify-content: center;
@@ -12,6 +11,10 @@
     top: 0;
     left: 0;
     z-index: 1010;
+
+    &.show {
+        display: flex;
+    }
 }
 
 .modal__content {
@@ -24,6 +27,11 @@
 
     &--contact {
         padding-bottom: 2.5rem;
+    }
+
+    &--story {
+        padding: 0;
+        background: none;
     }
 }
 
@@ -63,4 +71,9 @@
             text-decoration: none;
         }
     }
+}
+
+.modal__video {
+    display: block;
+    margin: 0 auto;
 }

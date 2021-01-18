@@ -545,6 +545,12 @@ header {
     margin: 3rem 0;
 }
 
+@media screen and (min-width: 992px) {
+    .nav--mobile {
+        display: none;
+    }
+}
+
 .nav__list {
     display: -ms-flexbox;
     display: flex;
