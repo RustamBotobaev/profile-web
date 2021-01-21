@@ -86,14 +86,14 @@
 /************************************************************************/
 /******/ ({
 
-/***/ "./src/assets/js/file.js":
-/*!*******************************!*\
-  !*** ./src/assets/js/file.js ***!
-  \*******************************/
+/***/ "./src/assets/js/mobileNav.js":
+/*!************************************!*\
+  !*** ./src/assets/js/mobileNav.js ***!
+  \************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("console.log('file2')\n\n//# sourceURL=webpack:///./src/assets/js/file.js?");
+eval("const burger = document.getElementById('sidebarToggle');\r\nconst sidebar = document.getElementById('sidebar');\r\n\r\nburger.addEventListener('click', event => {\r\n    document.body.classList.toggle('show-sidebar');\r\n});\n\n//# sourceURL=webpack:///./src/assets/js/mobileNav.js?");
 
 /***/ }),
 
@@ -104,18 +104,29 @@ eval("console.log('file2')\n\n//# sourceURL=webpack:///./src/assets/js/file.js?"
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("const modalBtn = document.querySelectorAll('[data-modal]');\r\nconst body = document.body;\r\nconst modalClose = document.querySelectorAll('.modal__close');\r\n\r\nmodalBtn.forEach(item => {\r\n    item.addEventListener('click', event => {\r\n        let $this = event.currentTarget;\r\n        let modalId = $this.getAttribute('data-modal');\r\n        let modal = document.getElementById(modalId);\r\n        let modalContent = modal.querySelector('.modal__content');\r\n\r\n        modalContent.addEventListener('click', event => {\r\n            event.stopPropagation();\r\n        });\r\n\r\n        modal.classList.add('show');\r\n        body.classList.add('no-scroll');\r\n\r\n    });\r\n});\r\n\r\nmodalClose.forEach(item => {\r\n    item.addEventListener('click', event => {\r\n        let currentModal = event.target.closest('.modal');\r\n\r\n        closeModal(currentModal);\r\n    });\r\n});\r\n\r\nmodal.forEach(item => {\r\n    item.addEventListener('click', event => {\r\n        let currentModal = event.target;\r\n\r\n        closeModal(currentModal);\r\n    });\r\n});\r\n\r\nfunction closeModal(currentModal) {\r\n    currentModal.classList.remove('show');\r\n    body.classList.remove('no-scroll');\r\n}\n\n//# sourceURL=webpack:///./src/assets/js/modal.js?");
+eval("const modalBtn = document.querySelectorAll('[data-modal]');\r\nconst body = document.body;\r\nconst modalCansel = document.querySelectorAll('.modal__cancel');\r\nconst modal = document.querySelectorAll('.modal');\r\n\r\nmodalBtn.forEach(item => {\r\n    item.addEventListener('click', event => {\r\n        let $this = event.currentTarget;\r\n        let modalId = $this.getAttribute('data-modal');\r\n        let modal = document.getElementById(modalId);\r\n        let modalContent = modal.querySelector('.modal__content');\r\n\r\n        modalContent.addEventListener('click', event => {\r\n            event.stopPropagation();\r\n        });\r\n\r\n        modal.classList.add('show');\r\n        body.classList.add('no-scroll');\r\n\r\n        setTimeout(function (){\r\n            modalContent.style.transform = 'none';\r\n        }, 1);\r\n        \r\n\r\n    });\r\n});\r\n\r\nmodalCansel.forEach(item => {\r\n    item.addEventListener('click', event => {\r\n        let currentModal = event.target.closest('.modal');\r\n\r\n        closeModal(currentModal);\r\n    });\r\n});\r\n\r\nmodal.forEach(item => {\r\n    item.addEventListener('click', event => {\r\n        let currentModal = event.target;\r\n\r\n        closeModal(currentModal);\r\n    });\r\n});\r\n\r\nfunction closeModal(currentModal) {\r\n    let modalContent = currentModal.querySelector('.modal__content');\r\n    modalContent.removeAttribute('style');\r\n\r\n    setTimeout(() => {\r\n        currentModal.classList.remove('show');\r\n        body.classList.remove('no-scroll');\r\n    }, 200);\r\n\r\n}\n\n//# sourceURL=webpack:///./src/assets/js/modal.js?");
+
+/***/ }),
+
+/***/ "./src/assets/js/textarea.js":
+/*!***********************************!*\
+  !*** ./src/assets/js/textarea.js ***!
+  \***********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("const textArea = document.querySelectorAll('[data-autoresize]');\r\n\r\ntextArea.forEach(item => {\r\n    let textAreaH = item.offsetHeight;\r\n\r\n    item.addEventListener('input', event => {\r\n        let $this = event.target;\r\n\r\n        $this.style.height = textAreaH + 'px';\r\n        $this.style.height = $this.scrollHeight + 'px';\r\n    });\r\n});\n\n//# sourceURL=webpack:///./src/assets/js/textarea.js?");
 
 /***/ }),
 
 /***/ 0:
-/*!**************************************************************!*\
-  !*** multi ./src/assets/js/file.js ./src/assets/js/modal.js ***!
-  \**************************************************************/
+/*!***********************************************************************************************!*\
+  !*** multi ./src/assets/js/mobileNav.js ./src/assets/js/modal.js ./src/assets/js/textarea.js ***!
+  \***********************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("__webpack_require__(/*! D:\\my work\\profile\\src\\assets\\js\\file.js */\"./src/assets/js/file.js\");\nmodule.exports = __webpack_require__(/*! D:\\my work\\profile\\src\\assets\\js\\modal.js */\"./src/assets/js/modal.js\");\n\n\n//# sourceURL=webpack:///multi_./src/assets/js/file.js_./src/assets/js/modal.js?");
+eval("__webpack_require__(/*! D:\\my work\\profile\\src\\assets\\js\\mobileNav.js */\"./src/assets/js/mobileNav.js\");\n__webpack_require__(/*! D:\\my work\\profile\\src\\assets\\js\\modal.js */\"./src/assets/js/modal.js\");\nmodule.exports = __webpack_require__(/*! D:\\my work\\profile\\src\\assets\\js\\textarea.js */\"./src/assets/js/textarea.js\");\n\n\n//# sourceURL=webpack:///multi_./src/assets/js/mobileNav.js_./src/assets/js/modal.js_./src/assets/js/textarea.js?");
 
 /***/ })
 

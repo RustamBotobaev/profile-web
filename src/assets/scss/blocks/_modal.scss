@@ -25,6 +25,13 @@
     border-radius: 5px;
     position: relative;
 
+    transform: translateY(-50px);
+    transition: transform 200ms ease-in-out;
+
+    @include braekpoint($tablet-bp) {
+        padding: 5rem 3rem 3rem;
+    }
+
     &--contact {
         padding-bottom: 2.5rem;
     }

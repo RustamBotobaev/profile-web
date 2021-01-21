@@ -34,7 +34,7 @@
                 </ul>
             </nav>
     
-            <button class="burger" type="button">
+            <button class="burger" type="button" id="sidebarToggle">
                 <span>Open nav</span>
             </button>
         </div>
@@ -51,7 +51,7 @@
         </div>
     </header>
     
-    <aside class="sidebar">
+    <aside class="sidebar" id="sidebar">
         <div class="sidebar__header">
             <img src="../assets/images/sidebar-head.jpg" alt="sidebar-head">
         </div>
@@ -146,7 +146,7 @@
                     <h3 class="post__subtitle">Обсуждение</h3>
                     <form class="form" action="/" method="POST">
                         <div class="form__group">
-                    <textarea class="form__control form__control--textarea" name="comment-text" placeholder="Текст комментария"></textarea> 
+                    <textarea class="form__control form__control--textarea" name="comment-text" placeholder="Текст комментария" data-autoresize></textarea> 
                     <span class="form__line"></span>
                 </div>           
                     <button class="btn btn--blue btn--rounded" type="submit">Отправить</button></form>
@@ -183,7 +183,7 @@
     </div>
     
     <div class="modal" id="story-modal">
-        <div class="modal__contant  modal__content--story">
+        <div class="modal__content  modal__content--story">
         <video class="modal__video" src="" poster="https://placehold.it/420x580"></video>
     </div>
     </div>    <div class="modal" id="contact-modal">

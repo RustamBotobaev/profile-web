@@ -1762,6 +1762,11 @@ header {
     z-index: 1010;
 }
 
+.modal.show {
+    display: -ms-flexbox;
+    display: flex;
+}
+
 .modal__content {
     width: 100%;
     max-width: 500px;
@@ -1773,6 +1778,11 @@ header {
 
 .modal__content--contact {
     padding-bottom: 2.5rem;
+}
+
+.modal__content--story {
+    padding: 0;
+    background: none;
 }
 
 .modal__cancel {
@@ -1815,4 +1825,9 @@ header {
 
 .modal__footer a:hover {
     text-decoration: none;
+}
+
+.modal__video {
+    display: block;
+    margin: 0 auto;
 }

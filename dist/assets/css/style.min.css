@@ -769,7 +769,7 @@ header {
 
 .add-post__form {
   display: flex;
-  align-items: center; }
+  align-items: flex-end; }
 
 .add-post__textarea {
   font-family: inherit;
@@ -778,7 +778,7 @@ header {
   display: block;
   flex-grow: 1;
   overflow: hidden;
-  height: 26px;
+  height: 34px;
   border: none;
   background: transparent;
   resize: none; }
@@ -1272,7 +1272,12 @@ header {
   padding: 8rem;
   background-color: #202020;
   border-radius: 5px;
-  position: relative; }
+  position: relative;
+  transform: translateY(-50px);
+  transition: transform 200ms ease-in-out; }
+  @media screen and (max-width: 991px) {
+    .modal__content {
+      padding: 5rem 3rem 3rem; } }
   .modal__content--contact {
     padding-bottom: 2.5rem; }
   .modal__content--story {
